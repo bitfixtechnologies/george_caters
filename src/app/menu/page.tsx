@@ -128,15 +128,6 @@ export default function MenuPage() {
                 className={`menu-tab-btn ${activeTab === category ? "active" : ""}`}
                 onClick={() => setActiveTab(category)}
                 style={{
-                  background: activeTab === category ? "var(--color-accent)" : "rgba(255, 255, 255, 0.05)",
-                  color: activeTab === category ? "#0c0720" : "var(--color-text-light)",
-                  border: "none",
-                  padding: "0.8rem 2rem",
-                  fontSize: "1rem",
-                  fontWeight: "600",
-                  borderRadius: "50px",
-                  cursor: "pointer",
-                  transition: "var(--transition-normal)",
                   textTransform: "capitalize"
                 }}
               >
@@ -151,11 +142,11 @@ export default function MenuPage() {
                 key={idx}
                 className="menu-item-card"
                 style={{
-                  background: "rgba(255, 255, 255, 0.02)",
-                  backdropFilter: "blur(10px)",
-                  border: "1px solid rgba(255, 255, 255, 0.05)",
+                  background: "#ffffff",
+                  border: "1px solid var(--color-border)",
                   borderRadius: "15px",
                   padding: "2rem",
+                  boxShadow: "0 10px 30px rgba(37, 20, 86, 0.03)",
                   transition: "var(--transition-normal)"
                 }}
               >

@@ -85,7 +85,7 @@ export default function ContactPage() {
                   </div>
                   <div className="contact-text">
                     <span className="contact-label">Call Us</span>
-                    <span className="contact-value">+1 (555) 797-8890</span>
+                    <span className="contact-value">+91 9495227110</span>
                   </div>
                 </div>
 
@@ -102,16 +102,20 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="contact-item">
-                  <div className="contact-icon">
+                <div className="contact-item" style={{ alignItems: "flex-start" }}>
+                  <div className="contact-icon" style={{ marginTop: "4px" }}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                       <circle cx="12" cy="10" r="3"></circle>
                     </svg>
                   </div>
                   <div className="contact-text">
-                    <span className="contact-label">Headquarters</span>
-                    <span className="contact-value">742 Gourmet Ave, Beverly Hills, CA</span>
+                    <span className="contact-label">Takeaway Huts</span>
+                    <div style={{ display: "flex", flexDirection: "column", gap: "0.3rem", marginTop: "0.25rem", color: "var(--color-text-muted)", fontSize: "0.9rem" }}>
+                      <div>Adat Center: <a href="tel:7736221331" style={{ color: "var(--color-text-light)", fontWeight: "600" }}>7736221331</a></div>
+                      <div>Parappur: <a href="tel:8089718087" style={{ color: "var(--color-text-light)", fontWeight: "600" }}>8089718087</a></div>
+                      <div>Peramangalam: <a href="tel:9995233121" style={{ color: "var(--color-text-light)", fontWeight: "600" }}>9995233121</a></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -240,25 +244,31 @@ export default function ContactPage() {
         <div className="container">
           <div className="section-header text-center" style={{ marginBottom: "4rem" }}>
             <span className="section-tag">Find Us</span>
-            <h2>Our Takeaway Food Hubs</h2>
+            <h2>Our Takeaway Huts</h2>
             <p>Select your preferred pickup location when placing an order or inquiry.</p>
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2rem" }}>
             <div className="service-card" style={{ padding: "2.5rem" }}>
-              <h4 style={{ fontSize: "1.25rem", color: "var(--color-accent)", marginBottom: "0.5rem" }}>Beverly Hills Hub</h4>
-              <p style={{ fontSize: "0.9rem", color: "var(--color-text-muted)", marginBottom: "1rem" }}>742 Gourmet Ave, Beverly Hills, CA 90210</p>
+              <h4 style={{ fontSize: "1.25rem", color: "var(--color-accent)", marginBottom: "0.5rem" }}>Adat Center</h4>
+              <p style={{ fontSize: "1.1rem", fontWeight: "600", color: "var(--color-text-light)", marginBottom: "1rem" }}>
+                Phone: <a href="tel:7736221331" style={{ color: "var(--color-text-light)" }}>7736221331</a>
+              </p>
               <span style={{ fontSize: "0.8rem", color: "var(--color-text-muted)" }}>Hours: 10:00 AM - 10:00 PM</span>
             </div>
             <div className="service-card" style={{ padding: "2.5rem" }}>
-              <h4 style={{ fontSize: "1.25rem", color: "var(--color-accent)", marginBottom: "0.5rem" }}>Downtown LA Hub</h4>
-              <p style={{ fontSize: "0.9rem", color: "var(--color-text-muted)", marginBottom: "1rem" }}>108 Culinary Way, Los Angeles, CA 90012</p>
-              <span style={{ fontSize: "0.8rem", color: "var(--color-text-muted)" }}>Hours: 11:00 AM - 11:00 PM</span>
+              <h4 style={{ fontSize: "1.25rem", color: "var(--color-accent)", marginBottom: "0.5rem" }}>Parappur</h4>
+              <p style={{ fontSize: "1.1rem", fontWeight: "600", color: "var(--color-text-light)", marginBottom: "1rem" }}>
+                Phone: <a href="tel:8089718087" style={{ color: "var(--color-text-light)" }}>8089718087</a>
+              </p>
+              <span style={{ fontSize: "0.8rem", color: "var(--color-text-muted)" }}>Hours: 10:00 AM - 10:00 PM</span>
             </div>
             <div className="service-card" style={{ padding: "2.5rem" }}>
-              <h4 style={{ fontSize: "1.25rem", color: "var(--color-accent)", marginBottom: "0.5rem" }}>Santa Monica Hub</h4>
-              <p style={{ fontSize: "0.9rem", color: "var(--color-text-muted)", marginBottom: "1rem" }}>45 Ocean Terrace, Santa Monica, CA 90401</p>
-              <span style={{ fontSize: "0.8rem", color: "var(--color-text-muted)" }}>Hours: 10:00 AM - 09:00 PM</span>
+              <h4 style={{ fontSize: "1.25rem", color: "var(--color-accent)", marginBottom: "0.5rem" }}>Peramangalam</h4>
+              <p style={{ fontSize: "1.1rem", fontWeight: "600", color: "var(--color-text-light)", marginBottom: "1rem" }}>
+                Phone: <a href="tel:9995233121" style={{ color: "var(--color-text-light)" }}>9995233121</a>
+              </p>
+              <span style={{ fontSize: "0.8rem", color: "var(--color-text-muted)" }}>Hours: 10:00 AM - 10:00 PM</span>
             </div>
           </div>
         </div>

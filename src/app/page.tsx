@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -109,8 +109,104 @@ const menuData = {
 
 type MenuCategory = keyof typeof menuData;
 
+// Custom hook for relative viewport parallax scroll effect
+function useParallax(speed = 0.15) {
+  const [offset, setOffset] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!ref.current) return;
+      const rect = ref.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      // Only calculate if the element is visible in the viewport
+      if (rect.top < windowHeight && rect.bottom > 0) {
+        // Calculate distance from viewport center to element center
+        const elementCenter = rect.top + rect.height / 2;
+        const screenCenter = windowHeight / 2;
+        const diff = elementCenter - screenCenter;
+        setOffset(diff * speed);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // Initial position calculation
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [speed]);
+
+  return { ref, offset };
+}
+
+interface AnimatedCounterProps {
+  target: number;
+  suffix?: string;
+  duration?: number;
+}
+
+function AnimatedCounter({ target, suffix = "", duration = 2000 }: AnimatedCounterProps) {
+  const [count, setCount] = useState(0);
+  const elementRef = useRef<HTMLSpanElement>(null);
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated.current) {
+          hasAnimated.current = true;
+          let startTimestamp: number | null = null;
+          
+          const step = (timestamp: number) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            
+            // Easing function (easeOutQuad)
+            const easedProgress = progress * (2 - progress);
+            
+            setCount(Math.floor(easedProgress * target));
+            
+            if (progress < 1) {
+              window.requestAnimationFrame(step);
+            } else {
+              setCount(target);
+            }
+          };
+          
+          window.requestAnimationFrame(step);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [target, duration]);
+
+  const formatNumber = (num: number) => {
+    return num.toLocaleString();
+  };
+
+  return (
+    <span ref={elementRef} className="stat-number">
+      {formatNumber(count)}{suffix}
+    </span>
+  );
+}
+
 export default function Home() {
   const [activeTab, setActiveTab] = useState<MenuCategory>("appetizers");
+  
+  // Initialize parallax hook for services and contact sections
+  const servicesParallax = useParallax(0.12);
+  const contactParallax = useParallax(-0.1);
   
   // Booking Form State
   const [formState, setFormState] = useState({
@@ -218,19 +314,19 @@ export default function Home() {
         <div className="container">
           <div className="stats-grid">
             <div className="stat-item">
-              <span className="stat-number">1,200+</span>
+              <AnimatedCounter target={1200} suffix="+" />
               <span className="stat-label">Gatherings Catered</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number">45+</span>
+              <AnimatedCounter target={45} suffix="+" />
               <span className="stat-label">Gourmet Platters</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number">25+</span>
+              <AnimatedCounter target={25} suffix="+" />
               <span className="stat-label">Master Chefs</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number">15,000+</span>
+              <AnimatedCounter target={15000} suffix="+" />
               <span className="stat-label">Happy Foodies</span>
             </div>
           </div>
@@ -238,8 +334,35 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="section section-dark">
-        <div className="container">
+      <section 
+        id="services" 
+        className="section section-dark"
+        ref={servicesParallax.ref}
+        style={{ 
+          position: "relative", 
+          overflow: "hidden",
+          background: "transparent"
+        }}
+      >
+        {/* Parallax Background */}
+        <div 
+          style={{
+            position: "absolute",
+            top: "-15%",
+            left: 0,
+            width: "100%",
+            height: "130%",
+            backgroundImage: "url('/services_bg.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            transform: `translateY(${servicesParallax.offset}px)`,
+            willChange: "transform",
+            zIndex: 1,
+            opacity: 0.5,
+            pointerEvents: "none"
+          }}
+        />
+        <div className="container" style={{ position: "relative", zIndex: 2 }}>
           <div className="section-header text-center">
             <span className="section-tag">Our Specialties</span>
             <h2>Catering & Takeaway Services</h2>
@@ -519,8 +642,35 @@ export default function Home() {
       </section>
 
       {/* Inquiry / Booking Form Section */}
-      <section id="contact" className="section section-dark">
-        <div className="container">
+      <section 
+        id="contact" 
+        className="section section-dark"
+        ref={contactParallax.ref}
+        style={{ 
+          position: "relative", 
+          overflow: "hidden",
+          background: "transparent"
+        }}
+      >
+        {/* Parallax Background */}
+        <div 
+          style={{
+            position: "absolute",
+            top: "-15%",
+            left: 0,
+            width: "100%",
+            height: "130%",
+            backgroundImage: "url('/contact_bg.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            transform: `translateY(${contactParallax.offset}px)`,
+            willChange: "transform",
+            zIndex: 1,
+            opacity: 0.45,
+            pointerEvents: "none"
+          }}
+        />
+        <div className="container" style={{ position: "relative", zIndex: 2 }}>
           <div className="inquiry-wrapper">
             <div className="inquiry-info">
               <span className="section-tag" style={{ alignSelf: 'flex-start' }}>Get in Touch</span>
@@ -538,7 +688,7 @@ export default function Home() {
                   </div>
                   <div className="contact-text">
                     <span className="contact-label">Call Us</span>
-                    <span className="contact-value">+1 (555) 797-8890</span>
+                    <span className="contact-value">+91 9495227110</span>
                   </div>
                 </div>
 
@@ -551,20 +701,24 @@ export default function Home() {
                   </div>
                   <div className="contact-text">
                     <span className="contact-label">Email Us</span>
-                    <span className="contact-value">reserve@royalvioletcatering.com</span>
+                    <span className="contact-value">reserve@georgefoodscaters.com</span>
                   </div>
                 </div>
 
-                <div className="contact-item">
-                  <div className="contact-icon">
+                <div className="contact-item" style={{ alignItems: "flex-start" }}>
+                  <div className="contact-icon" style={{ marginTop: "4px" }}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                       <circle cx="12" cy="10" r="3"></circle>
                     </svg>
                   </div>
                   <div className="contact-text">
-                    <span className="contact-label">Headquarters</span>
-                    <span className="contact-value">742 Gourmet Ave, Beverly Hills, CA</span>
+                    <span className="contact-label">Takeaway Huts</span>
+                    <div style={{ display: "flex", flexDirection: "column", gap: "0.3rem", marginTop: "0.25rem", color: "var(--color-text-muted)", fontSize: "0.9rem" }}>
+                      <div>Adat Center: <a href="tel:7736221331" style={{ color: "var(--color-text-light)", fontWeight: "600" }}>7736221331</a></div>
+                      <div>Parappur: <a href="tel:8089718087" style={{ color: "var(--color-text-light)", fontWeight: "600" }}>8089718087</a></div>
+                      <div>Peramangalam: <a href="tel:9995233121" style={{ color: "var(--color-text-light)", fontWeight: "600" }}>9995233121</a></div>
+                    </div>
                   </div>
                 </div>
               </div>
