@@ -29,7 +29,7 @@ export default function Header() {
         <div className="container">
           <Link href="/" className="logo">
             <img src="/logo.png?v=2" alt="George Foods & Caters Logo" className="logo-img" />
-            <span className="logo-text">GEORGE FOODS</span>
+            <span className="logo-text">GEORGE FOODS & CATERING</span>
           </Link>
 
           {/* Desktop Nav */}

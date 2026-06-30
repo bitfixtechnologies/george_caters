@@ -142,11 +142,11 @@ export default function MenuPage() {
                 key={idx}
                 className="menu-item-card"
                 style={{
-                  background: "#ffffff",
+                  background: "var(--color-card-bg)",
                   border: "1px solid var(--color-border)",
                   borderRadius: "15px",
                   padding: "2rem",
-                  boxShadow: "0 10px 30px rgba(37, 20, 86, 0.03)",
+                  boxShadow: "0 10px 30px rgba(82, 45, 128, 0.03)",
                   transition: "var(--transition-normal)"
                 }}
               >
@@ -162,7 +162,7 @@ export default function MenuPage() {
                 {"badge" in item && (
                   <span
                     style={{
-                      background: "rgba(212, 175, 55, 0.15)",
+                      background: "rgba(122, 88, 193, 0.15)",
                       color: "var(--color-accent)",
                       padding: "0.25rem 0.75rem",
                       fontSize: "0.75rem",

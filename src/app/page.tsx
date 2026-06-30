@@ -109,37 +109,7 @@ const menuData = {
 
 type MenuCategory = keyof typeof menuData;
 
-// Custom hook for relative viewport parallax scroll effect
-function useParallax(speed = 0.15) {
-  const [offset, setOffset] = useState(0);
-  const ref = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!ref.current) return;
-      const rect = ref.current.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      
-      // Only calculate if the element is visible in the viewport
-      if (rect.top < windowHeight && rect.bottom > 0) {
-        // Calculate distance from viewport center to element center
-        const elementCenter = rect.top + rect.height / 2;
-        const screenCenter = windowHeight / 2;
-        const diff = elementCenter - screenCenter;
-        setOffset(diff * speed);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); // Initial position calculation
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [speed]);
-
-  return { ref, offset };
-}
 
 interface AnimatedCounterProps {
   target: number;
@@ -203,10 +173,7 @@ function AnimatedCounter({ target, suffix = "", duration = 2000 }: AnimatedCount
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<MenuCategory>("appetizers");
-  
-  // Initialize parallax hook for services and contact sections
-  const servicesParallax = useParallax(0.12);
-  const contactParallax = useParallax(-0.1);
+
   
   // Booking Form State
   const [formState, setFormState] = useState({
@@ -337,7 +304,6 @@ export default function Home() {
       <section 
         id="services" 
         className="section section-dark"
-        ref={servicesParallax.ref}
         style={{ 
           position: "relative", 
           overflow: "hidden",
@@ -348,17 +314,13 @@ export default function Home() {
         <div 
           style={{
             position: "absolute",
-            top: "-15%",
-            left: 0,
-            width: "100%",
-            height: "130%",
+            inset: 0,
             backgroundImage: "url('/services_bg.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
-            transform: `translateY(${servicesParallax.offset}px)`,
-            willChange: "transform",
+            backgroundAttachment: "fixed",
             zIndex: 1,
-            opacity: 0.5,
+            opacity: 0.3,
             pointerEvents: "none"
           }}
         />
@@ -645,7 +607,6 @@ export default function Home() {
       <section 
         id="contact" 
         className="section section-dark"
-        ref={contactParallax.ref}
         style={{ 
           position: "relative", 
           overflow: "hidden",
@@ -656,17 +617,13 @@ export default function Home() {
         <div 
           style={{
             position: "absolute",
-            top: "-15%",
-            left: 0,
-            width: "100%",
-            height: "130%",
+            inset: 0,
             backgroundImage: "url('/contact_bg.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
-            transform: `translateY(${contactParallax.offset}px)`,
-            willChange: "transform",
+            backgroundAttachment: "fixed",
             zIndex: 1,
-            opacity: 0.45,
+            opacity: 0.3,
             pointerEvents: "none"
           }}
         />
