@@ -81,7 +81,7 @@ export default function Header() {
           <div className="nav-actions">
             <Link 
               href="/contact" 
-              className="btn btn-secondary" 
+              className="btn btn-primary" 
               style={{ padding: "0.5rem 1.5rem", fontSize: "0.9rem" }}
             >
               Get a Quote

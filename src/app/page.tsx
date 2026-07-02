@@ -223,53 +223,54 @@ export default function Home() {
 
       {/* Hero Section */}
       <section id="home" className="hero">
-        <div className="container">
-          <div className="hero-grid">
-            <div className="hero-content">
-              <div className="hero-badge">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style={{ marginRight: '4px' }}>
-                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                </svg>
-                PREMIUM CATERING & TAKEAWAY HUBS
-              </div>
-              <h1 className="hero-title">
-                Premium Catering <span>& Gourmet Takeaway Hubs</span>
-              </h1>
-              <p className="hero-description">
-                Bring outstanding flavor to your gatherings, weddings, and parties. We deliver custom culinary creations directly to your venue or offer fresh pickup from our gourmet food hubs.
-              </p>
-              <div className="hero-buttons">
-                <a href="/menu" className="btn btn-primary">
-                  Explore Signature Menu
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </a>
-                <a href="/contact" className="btn btn-secondary">Request Catering</a>
-              </div>
-            </div>
-            <div className="hero-image-container">
-              <div className="hero-image-wrapper">
-                <img 
-                  src="/hero.png" 
-                  alt="Luxurious gourmet catering buffet setup with violet themes" 
-                  className="hero-img" 
-                />
-              </div>
-              
-              {/* Floating Badge 1 */}
-              <div className="hero-decoration-badge badge-stars">
-                <div className="testimonial-stars" style={{ marginBottom: "0.25rem" }}>
-                  {"★★★★★".split("").map((s, i) => <span key={i}>{s}</span>)}
-                </div>
-                <span className="badge-text-small">5.0 Star Rated Service</span>
-              </div>
+        {/* Full Background Image with Overlay */}
+        <div className="hero-bg-container">
+          <img 
+            src="/hero_v2.png" 
+            alt="Luxurious gourmet catering buffet setup" 
+            className="hero-bg-img" 
+          />
+          <div className="hero-overlay"></div>
+        </div>
 
-              {/* Floating Badge 2 */}
-              <div className="hero-decoration-badge badge-experience">
-                <span className="badge-text-big">15+</span>
-                <span className="badge-text-small">Years of Culinary Art</span>
+        <div className="container">
+          <div className="hero-content">
+            <div className="hero-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style={{ marginRight: '4px' }}>
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              PREMIUM CATERING & TAKEAWAY HUBS
+            </div>
+            <h1 className="hero-title">
+              Premium Catering <span>& Gourmet Takeaway Hubs</span>
+            </h1>
+            <p className="hero-description">
+              Bring outstanding flavor to your gatherings, weddings, and parties. We deliver custom culinary creations directly to your venue or offer fresh pickup from our gourmet food hubs.
+            </p>
+            <div className="hero-buttons">
+              <a href="/menu" className="btn btn-primary">
+                Explore Signature Menu
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="/contact" className="btn btn-secondary">Request Catering</a>
+            </div>
+
+            {/* Elegant Stats Row */}
+            <div className="hero-stats-row">
+              <div className="hero-stat-badge">
+                <span className="hero-stat-num">5.0 ★</span>
+                <span className="hero-stat-txt">Star Rated Service</span>
+              </div>
+              <div className="hero-stat-badge">
+                <span className="hero-stat-num">15+</span>
+                <span className="hero-stat-txt">Years of Culinary Art</span>
+              </div>
+              <div className="hero-stat-badge">
+                <span className="hero-stat-num">100%</span>
+                <span className="hero-stat-txt">Bespoke Menus</span>
               </div>
             </div>
           </div>
@@ -320,7 +321,7 @@ export default function Home() {
             backgroundPosition: "center",
             backgroundAttachment: "fixed",
             zIndex: 1,
-            opacity: 0.3,
+            opacity: 0.8,
             pointerEvents: "none"
           }}
         />
@@ -476,6 +477,7 @@ export default function Home() {
           <div className="features-grid">
             <div className="features-image">
               <div 
+                className="animate-float-luxury"
                 style={{ 
                   position: "relative",
                   borderRadius: "24px",
@@ -486,20 +488,20 @@ export default function Home() {
                 }}
               >
                 <img 
-                  src="/hero.png" 
-                  alt="Chefs preparing fine dining plating" 
-                  style={{ width: "100%", height: "100%", objectFit: "cover", filter: "hue-rotate(280deg)" }} 
+                  src="/catering_specialty.png" 
+                  alt="Premium catering gourmet buffet setup" 
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }} 
                 />
                 <div 
                   style={{ 
                     position: "absolute", 
                     inset: 0, 
-                    background: "linear-gradient(to top, rgba(12, 7, 32, 0.9), transparent)" 
+                    background: "linear-gradient(to top, rgba(36, 14, 76, 0.95), transparent)" 
                   }}
                 ></div>
                 <div style={{ position: "absolute", bottom: "30px", left: "30px", right: "30px" }}>
                   <h4 style={{ fontSize: "1.8rem", marginBottom: "0.5rem", color: "var(--color-accent)" }}>Artistry in Every Plate</h4>
-                  <p style={{ fontSize: "0.95rem" }}>We believe catering is not just about cooking, it's about crafting an immersive dining experience that stays with your guests forever.</p>
+                  <p style={{ fontSize: "0.95rem", color: "#ffffff" }}>We believe catering is not just about cooking, it's about crafting an immersive dining experience that stays with your guests forever.</p>
                 </div>
               </div>
             </div>
@@ -623,7 +625,7 @@ export default function Home() {
             backgroundPosition: "center",
             backgroundAttachment: "fixed",
             zIndex: 1,
-            opacity: 0.3,
+            opacity: 0.8,
             pointerEvents: "none"
           }}
         />
