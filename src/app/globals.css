@@ -1511,3 +1511,107 @@ textarea.form-input {
 .animate-float-luxury:hover img {
   transform: scale(1.06) rotate(0.5deg) !important;
 }
+
+/* Elevated Menu Custom Styles */
+.menu-nav-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.menu-nav-btn {
+  background: var(--color-white);
+  color: var(--color-purple-dark);
+  border: 1px solid var(--color-border);
+  padding: 0.85rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 8px rgba(36, 14, 76, 0.04);
+}
+
+.menu-nav-btn:hover {
+  background: rgba(255, 215, 0, 0.15);
+  border-color: var(--color-gold);
+  transform: translateY(-2px);
+}
+
+.menu-nav-btn.active {
+  background: var(--color-purple-dark);
+  color: var(--color-gold);
+  border-color: var(--color-purple-dark);
+  box-shadow: 0 8px 25px rgba(36, 14, 76, 0.25);
+}
+
+.menu-package-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 2.25rem;
+  box-shadow: 0 10px 30px rgba(36, 14, 76, 0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-package-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(36, 14, 76, 0.12);
+  border-color: var(--color-gold);
+}
+
+.menu-course-group {
+  margin-bottom: 1.5rem;
+}
+
+.menu-course-group:last-child {
+  margin-bottom: 0;
+}
+
+.course-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(36, 14, 76, 0.06);
+  color: var(--color-purple-dark);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.6rem;
+}
+
+.course-badge.gold {
+  background: rgba(255, 215, 0, 0.2);
+  color: var(--color-purple-dark);
+}
+
+.food-image-showcase {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(36, 14, 76, 0.15);
+  border: 2px solid rgba(255, 215, 0, 0.4);
+  position: relative;
+}
+
+.food-image-showcase img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.food-image-showcase:hover img {
+  transform: scale(1.04);
+}
+

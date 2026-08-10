@@ -7,102 +7,104 @@ import Footer from "../components/Footer";
 
 // Menu Data
 const menuData = {
-  appetizers: [
+  breakfast: [
     {
-      title: "Truffle Mushroom Bruschetta",
-      price: "$18",
-      description: "Crispy artisanal sourdough, roasted wild forest mushrooms, white truffle oil, shaved pecorino Romano.",
+      title: "Palappam & Mutton Khorma",
+      tag: "Breakfast Set 03",
+      description: "Soft lacy Palappams served with rich slow-cooked Mutton Khorma & boiled eggs.",
       badge: "Popular"
     },
     {
-      title: "Seared Ahi Tuna Bites",
-      price: "$24",
-      description: "Sesame-crusted rare yellowfin tuna, wasabi-lime aioli, pickled ginger, micro greens on crisp wonton.",
+      title: "Idly & Uzhunnu Vada Feast",
+      tag: "Breakfast Set 02",
+      description: "Fluffy Idlis & golden crispy Uzhunnu Vadas with authentic drumstick sambar & coconut chutney.",
+      badge: "100% Veg"
+    },
+    {
+      title: "Palappam & Traditional Fish Molly",
+      tag: "Breakfast Set 07",
+      description: "Traditional Kerala fish stew in coconut cream curry with lacy hoppers & steamed bananas.",
+      badge: "Heritage"
+    },
+    {
+      title: "Idiyappam & Veg Molly Platter",
+      tag: "Breakfast Set 04",
+      description: "Steamed rice string hoppers with aromatic vegetable molly & seasoned tapioca masala.",
+      badge: "100% Veg"
+    }
+  ],
+  starters: [
+    {
+      title: "Chicken Lollipop with Hot Garlic Sauce",
+      tag: "Banquet Starter",
+      description: "Crispy seasoned chicken winglets glazed in spicy garlic sauce.",
+      badge: "Chef Special"
+    },
+    {
+      title: "Prawns & Paneer Shashlik",
+      tag: "Grill Special",
+      description: "Marinated succulent prawns and paneer skewers char-grilled on bamboo sticks.",
       badge: "Signature"
     },
     {
-      title: "Duck Confit Croquettes",
-      price: "$22",
-      description: "Slow-cooked duck leg, Gruyère cheese, panko crust, served with a spiced plum dipping sauce."
+      title: "Beef & Veg Spring Rolls",
+      tag: "Finger Food",
+      description: "Crispy golden fried spring rolls filled with seasoned beef & garden vegetables."
     },
     {
-      title: "Fig & Goat Cheese Tartlets",
-      price: "$19",
-      description: "Sweet mission figs, caramelized balsamic onions, warm goat cheese, wildflower honey drizzle.",
-      badge: "Vegetarian"
+      title: "Baby Corn Crum Fried & Tartar Dip",
+      tag: "Veg Starter",
+      description: "Crispy breaded baby corn sticks served with garlic tartar dip.",
+      badge: "100% Veg"
     }
   ],
   mains: [
     {
-      title: "Herb-Crusted Rack of Lamb",
-      price: "$48",
-      description: "Rosemary and garlic crusted lamb, red wine reduction, roasted garlic potato purée, glazed heirloom carrots.",
-      badge: "Chef's Special"
+      title: "Kerala Fish Vattichathu & Matta Rice",
+      tag: "Royal Feast",
+      description: "Thick reduced clay-pot fish curry served with traditional Kerala Matta rice & Avial.",
+      badge: "Top Seller"
     },
     {
-      title: "Pan-Seared Chilean Sea Bass",
-      price: "$52",
-      description: "Saffron-infused Arborio risotto, butter-poached asparagus spears, citrus-infused beurre blanc.",
-      badge: "Gluten Free"
+      title: "Butter Chicken & Garlic Naan",
+      tag: "North Indian",
+      description: "Tandoori chicken in velvet tomato butter gravy with clay-oven garlic naan."
     },
     {
-      title: "Sous-Vide Prime Filet Mignon",
-      price: "$56",
-      description: "8oz center cut filet, black truffle butter, roasted wild chanterelles, rich red wine demi-glace."
+      title: "Beef Coconut Roast (Ularthiyathu)",
+      tag: "Kerala Special",
+      description: "Tender beef slow-roasted with fried coconut slivers & aromatic curry leaves.",
+      badge: "Traditional"
     },
     {
-      title: "Artisanal Gnocchi with Sage & Squash",
-      price: "$36",
-      description: "House-made potato gnocchi, brown butter sauce, roasted butternut squash, toasted pine nuts, fresh sage.",
-      badge: "Vegetarian"
+      title: "Duck Varutharachathu & Pathiri",
+      tag: "Grand Special",
+      description: "Slow-cooked duck in roasted coconut spice reduction served with thin Nice Pathiri.",
+      badge: "Special"
     }
   ],
   desserts: [
     {
-      title: "Valrhona Chocolate Dome",
-      price: "$16",
-      description: "Dark chocolate mousse, hazelnut praline crunch, warm salted caramel tableside pour-over.",
+      title: "Tender Coconut Pudding",
+      tag: "Signature Sweet",
+      description: "Velvety smooth tender coconut cream pudding served chilled.",
       badge: "Best Seller"
     },
     {
-      title: "Deconstructed Lemon Meringue",
-      price: "$14",
-      description: "Tangy Meyer lemon curd, toasted Italian meringue peaks, graham cracker soil, fresh raspberries."
+      title: "Golden Gulab Jamun & Carrot Halwa",
+      tag: "Traditional",
+      description: "Soft milk solids in warm cardamom syrup accompanied by ghee carrot halwa."
     },
     {
-      title: "Saffron Cardamom Crème Brûlée",
-      price: "$15",
-      description: "Silky egg custard infused with Kashmiri saffron & green cardamom, caramelized sugar crust.",
-      badge: "Unique"
+      title: "Fruit Truffle & Butterscotch Ice Cream",
+      tag: "Double Delight",
+      description: "Layered sponge cake fruit truffle topped with rich butterscotch scoops.",
+      badge: "Popular"
     },
     {
-      title: "Wild Berry Lavender Pavlova",
-      price: "$15",
-      description: "Crisp meringue shell, soft marshmallow center, vanilla bean chantilly, fresh berries, lavender honey."
-    }
-  ],
-  drinks: [
-    {
-      title: "The Royal Violet",
-      price: "$18",
-      description: "Empress 1908 gin, wild lavender syrup, fresh lemon juice, organic egg white, sparkling water drop.",
-      badge: "House Special"
-    },
-    {
-      title: "Smoked Rosemary Old Fashioned",
-      price: "$20",
-      description: "Double oaked bourbon, Angostura & orange bitters, smoked rosemary sprig infusion, large ice sphere."
-    },
-    {
-      title: "Spiced Hibiscus Mezcalita",
-      price: "$19",
-      description: "Artisanal Mezcal, wild hibiscus flower reduction, key lime juice, agave nectar, chili-salt rim."
-    },
-    {
-      title: "Elderflower Pear Sparkler",
-      price: "$17",
-      description: "Organic pear nectar, wild elderflower liqueur, Valdo prosecco, fresh garden mint.",
-      badge: "Refreshing"
+      title: "Live Refreshments & Fresh Juices",
+      tag: "Live Counter",
+      description: "Live Mojito station, watermelon, pineapple, mint lemon juice & cardamom tea."
     }
   ]
 };
@@ -172,7 +174,7 @@ function AnimatedCounter({ target, suffix = "", duration = 2000 }: AnimatedCount
 }
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState<MenuCategory>("appetizers");
+  const [activeTab, setActiveTab] = useState<MenuCategory>("breakfast");
 
   
   // Booking Form State
@@ -411,28 +413,28 @@ export default function Home() {
           {/* Menu Tabs */}
           <div className="menu-tabs">
             <button 
-              className={`menu-tab-btn ${activeTab === "appetizers" ? "active" : ""}`}
-              onClick={() => setActiveTab("appetizers")}
+              className={`menu-tab-btn ${activeTab === "breakfast" ? "active" : ""}`}
+              onClick={() => setActiveTab("breakfast")}
             >
-              Appetizers
+              Breakfast Specials
+            </button>
+            <button 
+              className={`menu-tab-btn ${activeTab === "starters" ? "active" : ""}`}
+              onClick={() => setActiveTab("starters")}
+            >
+              Starters & Appetizers
             </button>
             <button 
               className={`menu-tab-btn ${activeTab === "mains" ? "active" : ""}`}
               onClick={() => setActiveTab("mains")}
             >
-              Mains
+              Main Course Feasts
             </button>
             <button 
               className={`menu-tab-btn ${activeTab === "desserts" ? "active" : ""}`}
               onClick={() => setActiveTab("desserts")}
             >
-              Desserts
-            </button>
-            <button 
-              className={`menu-tab-btn ${activeTab === "drinks" ? "active" : ""}`}
-              onClick={() => setActiveTab("drinks")}
-            >
-              Signature Cocktails
+              Desserts & Refreshments
             </button>
           </div>
 
@@ -445,7 +447,7 @@ export default function Home() {
                   <div className="menu-item-header">
                     <span className="menu-item-title">{item.title}</span>
                     <span className="menu-item-line"></span>
-                    <span className="menu-item-price">{item.price}</span>
+                    <span className="menu-item-price" style={{ color: "var(--color-purple-dark)", fontSize: "0.85rem", fontWeight: "700" }}>{item.tag}</span>
                   </div>
                   <p className="menu-item-description">{item.description}</p>
                   {item.badge && <span className="menu-item-badge">{item.badge}</span>}
@@ -460,7 +462,7 @@ export default function Home() {
                   <div className="menu-item-header">
                     <span className="menu-item-title">{item.title}</span>
                     <span className="menu-item-line"></span>
-                    <span className="menu-item-price">{item.price}</span>
+                    <span className="menu-item-price" style={{ color: "var(--color-purple-dark)", fontSize: "0.85rem", fontWeight: "700" }}>{item.tag}</span>
                   </div>
                   <p className="menu-item-description">{item.description}</p>
                   {item.badge && <span className="menu-item-badge">{item.badge}</span>}
