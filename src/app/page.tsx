@@ -106,6 +106,32 @@ const menuData = {
       tag: "Live Counter",
       description: "Live Mojito station, watermelon, pineapple, mint lemon juice & cardamom tea."
     }
+  ],
+  specialDishes: [
+    {
+      title: "Live Sugar Candy & Chocolate Fountain",
+      tag: "Live Sweet Counter",
+      description: "Spun fluffy pink & blue sugar candy machine along with cascading warm chocolate fountain, fruit skewers & marshmallows.",
+      badge: "Kids Favourite"
+    },
+    {
+      title: "Live Chaat Counter (Pani Puri, Bhel Puri, Masala Puri)",
+      tag: "Street Food Live",
+      description: "Authentic live preparation of Pani Puri with chilled mint water, tangy Bhel Puri, Masala Puri & Sev Puri.",
+      badge: "Popular"
+    },
+    {
+      title: "Live Sea Food Counter (Fish Thoran & Fish Tawa Fry)",
+      tag: "Coastal Special",
+      description: "Fresh catch Fish Tawa Fry (Fish Thava) pan-fried hot live & Nadan Fish Thoran with grated coconut.",
+      badge: "Fresh Catch"
+    },
+    {
+      title: "Nadan Ruchi Counter (Kappa Puzhukku, Chakka & Liver)",
+      tag: "Kerala Heritage",
+      description: "Traditional steamed Kappa Puzhukku, Chakka delicacy, and spicy Nadan Liver Roast with black pepper & curry leaves.",
+      badge: "Signature"
+    }
   ]
 };
 
@@ -435,6 +461,12 @@ export default function Home() {
               onClick={() => setActiveTab("desserts")}
             >
               Desserts & Refreshments
+            </button>
+            <button 
+              className={`menu-tab-btn ${activeTab === "specialDishes" ? "active" : ""}`}
+              onClick={() => setActiveTab("specialDishes")}
+            >
+              🎪 Special Dishes & Live Counters
             </button>
           </div>
 

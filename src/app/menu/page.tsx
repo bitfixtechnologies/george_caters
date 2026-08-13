@@ -63,6 +63,14 @@ const categoryMeta = {
     image: "/menu/hightea_delights.png",
     imageAlt: "Kerala High Tea with Crisp Dosa, Kappa Fish Curry, Spring Rolls, and Fresh Mint Lemon Juice",
     badge: "Live Counters Included"
+  },
+  specialDishes: {
+    title: "Special Dishes & Live Counters",
+    subtitle: "Sugar Candy, Chocolate Fountain, Live Chaat, Seafood & Nadan Ruchi",
+    description: "Immersive live food counters featuring spun Sugar Candy, cascading Chocolate Fountain (Foundane), live Chaat (Bhel Puri, Pani Puri, Masala Puri), live Seafood (Fish Thoran, Fish Tawa Fry), and authentic Nadan Ruchi (Kappa Puzhukku, Chakka, Liver Roast).",
+    image: "/menu/special_counters.png",
+    imageAlt: "Special Dishes Live Counters featuring Chocolate Fountain, Sugar Candy, Chaat Counter, Seafood Tawa and Kappa",
+    badge: "Interactive Experience"
   }
 };
 
@@ -271,6 +279,46 @@ const masterCatalog = [
       { name: "Rasagula", desc: "Spongy cottage cheese balls in syrup" },
       { name: "Yellow Jilebi", desc: "Crisp golden jalebi spirals" },
       { name: "Cut Fresh Season Fruits", desc: "Assorted platter of sliced fresh fruits" }
+    ]
+  },
+  {
+    category: "🎪 Live Sugar Candy & Chocolate Fountain Station",
+    isVeg: true,
+    dishes: [
+      { name: "Live Sugar Candy / Cotton Candy", desc: "Spun fresh live fluffy sugar candy cloud sticks in pink & blue" },
+      { name: "Cascading Chocolate Fountain (Foundane)", desc: "Warm flowing rich chocolate fountain served with dipping skewers" },
+      { name: "Marshmallow & Fruit Dip Skewers", desc: "Fresh strawberry, banana & fluffy marshmallow skewers for chocolate fountain" },
+      { name: "Wafer Crunch & Brownie Bites", desc: "Crispy waffle sticks & fudgy brownie squares for dipping" }
+    ]
+  },
+  {
+    category: "🧆 Live Chaat Counter (Pani Puri, Bhel Puri, Masala Puri)",
+    isVeg: true,
+    dishes: [
+      { name: "Live Pani Puri (Golgappa)", desc: "Crispy hollow puris filled with spiced potato-chickpea mash & chilled mint-coriander water" },
+      { name: "Live Bhel Puri", desc: "Crispy puffed rice tossed with raw mango, onions, sev & sweet-tangy tamarind chutney" },
+      { name: "Live Masala Puri", desc: "Warm crushed puri topped with hot spicy green pea gravy, fresh herbs & crunchy sev" },
+      { name: "Live Sev Puri & Dahi Puri", desc: "Crispy flat puris topped with seasoned potatoes, chilled yogurt, pomegranates & sev" }
+    ]
+  },
+  {
+    category: "🐟 Live Sea Food Counter (Fish Thoran & Fish Tawa Fry)",
+    isVeg: false,
+    dishes: [
+      { name: "Fish Tawa Fry (Fish Thava)", desc: "Fresh catch marinated in traditional Kerala chili-garlic spice paste, pan-fried hot on live tawa" },
+      { name: "Nadan Fish Thoran", desc: "Shredded fresh fish stir-fried with grated coconut, mustard seeds, curry leaves & green chilies" },
+      { name: "Live Prawns Pepper Roast", desc: "Succulent prawns wok-tossed with crushed black pepper, garlic & caramelized onions" },
+      { name: "Kerala Fish Pollichathu", desc: "Banana leaf wrapped spicy grilled fish" }
+    ]
+  },
+  {
+    category: "🏺 Nadan Ruchi Counter (Kappa Puzhukku, Chakka & Liver)",
+    isVeg: false,
+    dishes: [
+      { name: "Kappa Puzhukku (Steamed Tapioca)", desc: "Authentic Kerala mashed tapioca tempered with mustard, red chilies, garlic & coconut paste" },
+      { name: "Chakka Delicacy (Chakka Puzhukku / Aviyal)", desc: "Traditional steamed jackfruit mash cooked with coarsely ground coconut & spices" },
+      { name: "Nadan Liver Roast / Fry", desc: "Tender liver slow-cooked & tossed with black pepper, curry leaves, ginger & fried coconut" },
+      { name: "Nadan Kozhi Varattiyathu", desc: "Country-style Kerala spicy fried chicken" }
     ]
   }
 ];
@@ -518,6 +566,50 @@ const highTeaPackages = [
   }
 ];
 
+// 8. Special Counters & Live Stations Packages
+const specialCountersPackages = [
+  {
+    id: "sc1",
+    title: "Sugar Candy & Chocolate Fountain Station",
+    isVeg: true,
+    badge: "Kids & Dessert Live Favourite",
+    items: [
+      { course: "Sugar Candy Counter", list: ["Live Sugar Candy (Cotton Candy Spun Machine)", "Pink Vanilla & Blue Raspberry Flavors", "Fluffy Cloud Sticks & Cones"] },
+      { course: "Chocolate Fountain (Foundane)", list: ["Multi-Tier Flowing Milk / Dark Chocolate Fountain", "Fresh Strawberry & Banana Skewers", "Fluffy Marshmallow Pops", "Crispy Wafer Sticks & Fudgy Brownie Bites"] }
+    ]
+  },
+  {
+    id: "sc2",
+    title: "Live Street Food Chaat Counter",
+    isVeg: true,
+    badge: "Popular Interactive Counter",
+    items: [
+      { course: "Chaat Specialties", list: ["Live Pani Puri / Golgappa (Spiced Potato Mash & Chilled Mint Water)", "Live Bhel Puri (Tangy Tamarind, Raw Mango & Crispy Sev)", "Live Masala Puri (Warm Green Pea Gravy & Crushed Puris)", "Sev Puri & Chilled Dahi Puri"] },
+      { course: "Chutneys & Condiments", list: ["Spicy Mint-Coriander Water", "Sweet Dates & Tamarind Chutney", "Fiery Garlic Chili Chutney", "Crispy Nylon Sev & Fresh Pomegranates"] }
+    ]
+  },
+  {
+    id: "sc3",
+    title: "Live Sea Food Counter",
+    isVeg: false,
+    badge: "Fresh Live Coastal Catch",
+    items: [
+      { course: "Live Tawa & Stir-Fry", list: ["Fish Tawa Fry (Fish Thava Pan-Fried Live on Griddle with Secret Spice Paste)", "Nadan Fish Thoran (Shredded Fish Stir-Fried with Fresh Grated Coconut & Curry Leaves)", "Live Prawns Pepper Roast", "Kerala Fish Pollichathu (Banana Leaf Wrap Grill)"] },
+      { course: "Sides & Accompaniments", list: ["Lemon Wedges & Kanthari Dip", "Spicy Pickled Shallot Ring Salad", "Tawa Fried Fish Gravy Drizzle"] }
+    ]
+  },
+  {
+    id: "sc4",
+    title: "Nadan Ruchi Heritage Counter",
+    isVeg: false,
+    badge: "Authentic Kerala Village Counter",
+    items: [
+      { course: "Traditional Staples", list: ["Steamed Kappa Puzhukku (Tapioca Mash with Coconut & Chili)", "Chakka Delicacy (Chakka Puzhukku / Steamed Jackfruit Mash with Spices)", "Nadan Liver Roast / Fry (Mutton / Chicken Liver tossed with Black Pepper, Curry Leaves & Shallots)"] },
+      { course: "Heritage Accompaniments", list: ["Fiery Kanthari Mulaku Chammanthi", "Thick Red Claypot Fish Curry Gravy", "Fried Coconut Slivers & Garlic Chips"] }
+    ]
+  }
+];
+
 export default function MenuPage() {
   const [activeTab, setActiveTab] = useState<CategoryKey>("allDishes");
   const [searchQuery, setSearchQuery] = useState("");
@@ -548,6 +640,9 @@ export default function MenuPage() {
         break;
       case "highTea":
         dataset = highTeaPackages;
+        break;
+      case "specialDishes":
+        dataset = specialCountersPackages;
         break;
       default:
         dataset = [];
@@ -762,6 +857,12 @@ export default function MenuPage() {
               onClick={() => setActiveTab("highTea")}
             >
               ☕ High Tea & Live Counters
+            </button>
+            <button
+              className={`menu-nav-btn ${activeTab === "specialDishes" ? "active" : ""}`}
+              onClick={() => setActiveTab("specialDishes")}
+            >
+              🎪 Special Dishes & Live Counters
             </button>
           </div>
 
