@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import WhatsAppIcon from "./WhatsAppIcon";
 
 export default function Footer() {
   return (
@@ -68,21 +69,65 @@ export default function Footer() {
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                 </svg>
-                <span>+91 9495227110</span>
+                <div style={{ display: "inline-flex", alignItems: "center", flexWrap: "wrap", gap: "0.4rem" }}>
+                  <a href="tel:+919495227110" style={{ color: "white" }}>+91 9495227110</a>
+                  <a
+                    href="https://wa.me/919495227110?text=Hello%20George%20Foods%20%26%20Caters%2C%20I%20would%20like%20to%20inquire%20about%20catering%20services."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="whatsapp-inline-badge"
+                    title="Chat with us on WhatsApp"
+                  >
+                    <WhatsAppIcon size={14} /> WhatsApp
+                  </a>
+                </div>
               </div>
               <div className="footer-contact-item">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                   <polyline points="22,6 12,13 2,6"></polyline>
                 </svg>
-                <span>reserve@georgefoodscaters.com</span>
+                <span>Georgefood85@gmail.com</span>
               </div>
               <div style={{ marginTop: "1rem", borderTop: "1px solid rgba(255, 255, 255, 0.1)", paddingTop: "1rem" }}>
                 <span style={{ fontSize: "0.85rem", fontWeight: "600", color: "var(--color-accent)", display: "block", marginBottom: "0.5rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>Takeaway Huts</span>
-                <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem", fontSize: "0.85rem" }}>
-                  <div>Adat Center: <a href="tel:7736221331" style={{ color: "white" }}>7736221331</a></div>
-                  <div>Parappur: <a href="tel:8089718087" style={{ color: "white" }}>8089718087</a></div>
-                  <div>Peramangalam: <a href="tel:9995233121" style={{ color: "white" }}>9995233121</a></div>
+                <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", fontSize: "0.85rem" }}>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "0.3rem" }}>
+                    <span>Adat Center: <a href="tel:7736221331" style={{ color: "white" }}>7736221331</a></span>
+                    <a
+                      href="https://wa.me/917736221331?text=Hello%20George%20Foods%20Adat%20Center%2C%20I%20would%20like%20to%20place%20an%20order."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="whatsapp-inline-badge"
+                      title="WhatsApp Adat Center"
+                    >
+                      <WhatsAppIcon size={13} /> Chat
+                    </a>
+                  </div>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "0.3rem" }}>
+                    <span>Parappur: <a href="tel:8089718087" style={{ color: "white" }}>8089718087</a></span>
+                    <a
+                      href="https://wa.me/918089718087?text=Hello%20George%20Foods%20Parappur%2C%20I%20would%20like%20to%20place%20an%20order."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="whatsapp-inline-badge"
+                      title="WhatsApp Parappur"
+                    >
+                      <WhatsAppIcon size={13} /> Chat
+                    </a>
+                  </div>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "0.3rem" }}>
+                    <span>Peramangalam: <a href="tel:9995233121" style={{ color: "white" }}>9995233121</a></span>
+                    <a
+                      href="https://wa.me/919995233121?text=Hello%20George%20Foods%20Peramangalam%2C%20I%20would%20like%20to%20place%20an%20order."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="whatsapp-inline-badge"
+                      title="WhatsApp Peramangalam"
+                    >
+                      <WhatsAppIcon size={13} /> Chat
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

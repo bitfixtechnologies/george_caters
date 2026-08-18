@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import WhatsAppIcon from "../../components/WhatsAppIcon";
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({
@@ -84,8 +85,19 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div className="contact-text">
-                    <span className="contact-label">Call Us</span>
-                    <span className="contact-value">+91 9495227110</span>
+                    <span className="contact-label">Call & WhatsApp</span>
+                    <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", flexWrap: "wrap", marginTop: "0.1rem" }}>
+                      <a href="tel:+919495227110" className="contact-value" style={{ textDecoration: "none" }}>+91 9495227110</a>
+                      <a
+                        href="https://wa.me/919495227110?text=Hello%20George%20Foods%20%26%20Caters%2C%20I%20would%20like%20to%20inquire%20about%20catering%20services."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="whatsapp-inline-badge"
+                        title="Chat on WhatsApp"
+                      >
+                        <WhatsAppIcon size={14} /> WhatsApp
+                      </a>
+                    </div>
                   </div>
                 </div>
 
@@ -98,7 +110,7 @@ export default function ContactPage() {
                   </div>
                   <div className="contact-text">
                     <span className="contact-label">Email Us</span>
-                    <span className="contact-value">reserve@georgefoodscaters.com</span>
+                    <span className="contact-value">Georgefood85@gmail.com</span>
                   </div>
                 </div>
 
@@ -109,12 +121,45 @@ export default function ContactPage() {
                       <circle cx="12" cy="10" r="3"></circle>
                     </svg>
                   </div>
-                  <div className="contact-text">
+                  <div className="contact-text" style={{ width: "100%" }}>
                     <span className="contact-label">Takeaway Huts</span>
-                    <div style={{ display: "flex", flexDirection: "column", gap: "0.3rem", marginTop: "0.25rem", color: "var(--color-text-muted)", fontSize: "0.9rem" }}>
-                      <div>Adat Center: <a href="tel:7736221331" style={{ color: "var(--color-text-light)", fontWeight: "600" }}>7736221331</a></div>
-                      <div>Parappur: <a href="tel:8089718087" style={{ color: "var(--color-text-light)", fontWeight: "600" }}>8089718087</a></div>
-                      <div>Peramangalam: <a href="tel:9995233121" style={{ color: "var(--color-text-light)", fontWeight: "600" }}>9995233121</a></div>
+                    <div style={{ display: "flex", flexDirection: "column", gap: "0.45rem", marginTop: "0.35rem", color: "var(--color-text-muted)", fontSize: "0.9rem" }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", flexWrap: "wrap" }}>
+                        <span>Adat Center: <a href="tel:7736221331" style={{ color: "var(--color-text-light)", fontWeight: "600" }}>7736221331</a></span>
+                        <a
+                          href="https://wa.me/917736221331?text=Hello%20George%20Foods%20Adat%20Center%2C%20I%20would%20like%20to%20place%20an%20order."
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="whatsapp-inline-badge"
+                          title="WhatsApp Adat Center"
+                        >
+                          <WhatsAppIcon size={13} /> Chat
+                        </a>
+                      </div>
+                      <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", flexWrap: "wrap" }}>
+                        <span>Parappur: <a href="tel:8089718087" style={{ color: "var(--color-text-light)", fontWeight: "600" }}>8089718087</a></span>
+                        <a
+                          href="https://wa.me/918089718087?text=Hello%20George%20Foods%20Parappur%2C%20I%20would%20like%20to%20place%20an%20order."
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="whatsapp-inline-badge"
+                          title="WhatsApp Parappur"
+                        >
+                          <WhatsAppIcon size={13} /> Chat
+                        </a>
+                      </div>
+                      <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", flexWrap: "wrap" }}>
+                        <span>Peramangalam: <a href="tel:9995233121" style={{ color: "var(--color-text-light)", fontWeight: "600" }}>9995233121</a></span>
+                        <a
+                          href="https://wa.me/919995233121?text=Hello%20George%20Foods%20Peramangalam%2C%20I%20would%20like%20to%20place%20an%20order."
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="whatsapp-inline-badge"
+                          title="WhatsApp Peramangalam"
+                        >
+                          <WhatsAppIcon size={13} /> Chat
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -249,26 +294,53 @@ export default function ContactPage() {
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2rem" }}>
-            <div className="service-card" style={{ padding: "2.5rem" }}>
+            <div className="service-card" style={{ padding: "2.5rem", display: "flex", flexDirection: "column" }}>
               <h4 style={{ fontSize: "1.25rem", color: "var(--color-accent)", marginBottom: "0.5rem" }}>Adat Center</h4>
-              <p style={{ fontSize: "1.1rem", fontWeight: "600", color: "var(--color-text-light)", marginBottom: "1rem" }}>
+              <p style={{ fontSize: "1.1rem", fontWeight: "600", color: "var(--color-text-light)", marginBottom: "0.5rem" }}>
                 Phone: <a href="tel:7736221331" style={{ color: "var(--color-text-light)" }}>7736221331</a>
               </p>
-              <span style={{ fontSize: "0.8rem", color: "var(--color-text-muted)" }}>Hours: 10:00 AM - 10:00 PM</span>
+              <span style={{ fontSize: "0.85rem", color: "var(--color-text-muted)", marginBottom: "1.25rem" }}>Hours: 10:00 AM - 10:00 PM</span>
+              <a
+                href="https://wa.me/917736221331?text=Hello%20George%20Foods%20Adat%20Center%2C%20I%20would%20like%20to%20place%20an%20order."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="whatsapp-btn-primary"
+                style={{ marginTop: "auto", fontSize: "0.9rem", padding: "0.6rem 1.2rem" }}
+              >
+                <WhatsAppIcon size={18} color="#FFFFFF" /> Chat on WhatsApp
+              </a>
             </div>
-            <div className="service-card" style={{ padding: "2.5rem" }}>
+            <div className="service-card" style={{ padding: "2.5rem", display: "flex", flexDirection: "column" }}>
               <h4 style={{ fontSize: "1.25rem", color: "var(--color-accent)", marginBottom: "0.5rem" }}>Parappur</h4>
-              <p style={{ fontSize: "1.1rem", fontWeight: "600", color: "var(--color-text-light)", marginBottom: "1rem" }}>
+              <p style={{ fontSize: "1.1rem", fontWeight: "600", color: "var(--color-text-light)", marginBottom: "0.5rem" }}>
                 Phone: <a href="tel:8089718087" style={{ color: "var(--color-text-light)" }}>8089718087</a>
               </p>
-              <span style={{ fontSize: "0.8rem", color: "var(--color-text-muted)" }}>Hours: 10:00 AM - 10:00 PM</span>
+              <span style={{ fontSize: "0.85rem", color: "var(--color-text-muted)", marginBottom: "1.25rem" }}>Hours: 10:00 AM - 10:00 PM</span>
+              <a
+                href="https://wa.me/918089718087?text=Hello%20George%20Foods%20Parappur%2C%20I%20would%20like%20to%20place%20an%20order."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="whatsapp-btn-primary"
+                style={{ marginTop: "auto", fontSize: "0.9rem", padding: "0.6rem 1.2rem" }}
+              >
+                <WhatsAppIcon size={18} color="#FFFFFF" /> Chat on WhatsApp
+              </a>
             </div>
-            <div className="service-card" style={{ padding: "2.5rem" }}>
+            <div className="service-card" style={{ padding: "2.5rem", display: "flex", flexDirection: "column" }}>
               <h4 style={{ fontSize: "1.25rem", color: "var(--color-accent)", marginBottom: "0.5rem" }}>Peramangalam</h4>
-              <p style={{ fontSize: "1.1rem", fontWeight: "600", color: "var(--color-text-light)", marginBottom: "1rem" }}>
+              <p style={{ fontSize: "1.1rem", fontWeight: "600", color: "var(--color-text-light)", marginBottom: "0.5rem" }}>
                 Phone: <a href="tel:9995233121" style={{ color: "var(--color-text-light)" }}>9995233121</a>
               </p>
-              <span style={{ fontSize: "0.8rem", color: "var(--color-text-muted)" }}>Hours: 10:00 AM - 10:00 PM</span>
+              <span style={{ fontSize: "0.85rem", color: "var(--color-text-muted)", marginBottom: "1.25rem" }}>Hours: 10:00 AM - 10:00 PM</span>
+              <a
+                href="https://wa.me/919995233121?text=Hello%20George%20Foods%20Peramangalam%2C%20I%20would%20like%20to%20place%20an%20order."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="whatsapp-btn-primary"
+                style={{ marginTop: "auto", fontSize: "0.9rem", padding: "0.6rem 1.2rem" }}
+              >
+                <WhatsAppIcon size={18} color="#FFFFFF" /> Chat on WhatsApp
+              </a>
             </div>
           </div>
         </div>

@@ -4,6 +4,7 @@ import React, { useState, useMemo } from "react";
 import Image from "next/image";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import WhatsAppIcon from "../../components/WhatsAppIcon";
 
 // Category Data definitions mapped from George Foods Caterers (Adat, Thrissur) PDF Menu
 const categoryMeta = {
@@ -1332,7 +1333,7 @@ export default function MenuPage() {
                 Whether planning an intimate family gathering or a 2,000+ guest wedding reception in Thrissur, our executive chef creates tailored live counters, fusion courses, and dietary choices.
               </p>
 
-              <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+              <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center" }}>
                 <a
                   href="/contact"
                   className="btn btn-secondary"
@@ -1345,7 +1346,7 @@ export default function MenuPage() {
                   Contact Catering Manager
                 </a>
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+919495227110"
                   className="btn"
                   style={{
                     padding: "0.85rem 1.8rem",
@@ -1356,7 +1357,19 @@ export default function MenuPage() {
                     border: "1px solid rgba(255, 255, 255, 0.2)"
                   }}
                 >
-                  Call Directly
+                  Call +91 9495227110
+                </a>
+                <a
+                  href="https://wa.me/919495227110?text=Hello%20George%20Foods%20%26%20Caters%2C%20I%20would%20like%20to%20order%20from%20your%20Signature%20Menu."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="whatsapp-btn-primary"
+                  style={{
+                    padding: "0.85rem 1.8rem",
+                    borderRadius: "50px"
+                  }}
+                >
+                  <WhatsAppIcon size={20} color="#FFFFFF" /> WhatsApp Order
                 </a>
               </div>
             </div>
