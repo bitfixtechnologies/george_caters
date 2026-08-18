@@ -91,43 +91,42 @@ export default function Footer() {
               </div>
               <div style={{ marginTop: "1rem", borderTop: "1px solid rgba(255, 255, 255, 0.1)", paddingTop: "1rem" }}>
                 <span style={{ fontSize: "0.85rem", fontWeight: "600", color: "var(--color-accent)", display: "block", marginBottom: "0.5rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>Takeaway Huts</span>
-                <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", fontSize: "0.85rem" }}>
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "0.3rem" }}>
-                    <span>Adat Center: <a href="tel:7736221331" style={{ color: "white" }}>7736221331</a></span>
-                    <a
-                      href="https://wa.me/917736221331?text=Hello%20George%20Foods%20Adat%20Center%2C%20I%20would%20like%20to%20place%20an%20order."
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="whatsapp-inline-badge"
-                      title="WhatsApp Adat Center"
-                    >
-                      <WhatsAppIcon size={13} /> Chat
-                    </a>
-                  </div>
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "0.3rem" }}>
-                    <span>Parappur: <a href="tel:8089718087" style={{ color: "white" }}>8089718087</a></span>
-                    <a
-                      href="https://wa.me/918089718087?text=Hello%20George%20Foods%20Parappur%2C%20I%20would%20like%20to%20place%20an%20order."
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="whatsapp-inline-badge"
-                      title="WhatsApp Parappur"
-                    >
-                      <WhatsAppIcon size={13} /> Chat
-                    </a>
-                  </div>
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "0.3rem" }}>
-                    <span>Peramangalam: <a href="tel:9995233121" style={{ color: "white" }}>9995233121</a></span>
-                    <a
-                      href="https://wa.me/919995233121?text=Hello%20George%20Foods%20Peramangalam%2C%20I%20would%20like%20to%20place%20an%20order."
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="whatsapp-inline-badge"
-                      title="WhatsApp Peramangalam"
-                    >
-                      <WhatsAppIcon size={13} /> Chat
-                    </a>
-                  </div>
+                <div style={{ display: "grid", gridTemplateColumns: "minmax(105px, auto) 1fr auto", rowGap: "0.5rem", columnGap: "0.5rem", alignItems: "center", fontSize: "0.85rem" }}>
+                  <span style={{ color: "rgba(255, 255, 255, 0.8)" }}>Adat Center:</span>
+                  <a href="tel:7736221331" style={{ color: "white", fontWeight: "600" }}>7736221331</a>
+                  <a
+                    href="https://wa.me/917736221331?text=Hello%20George%20Foods%20Adat%20Center%2C%20I%20would%20like%20to%20place%20an%20order."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="whatsapp-inline-badge"
+                    title="WhatsApp Adat Center"
+                  >
+                    <WhatsAppIcon size={13} /> Chat
+                  </a>
+
+                  <span style={{ color: "rgba(255, 255, 255, 0.8)" }}>Parappur:</span>
+                  <a href="tel:8089718087" style={{ color: "white", fontWeight: "600" }}>8089718087</a>
+                  <a
+                    href="https://wa.me/918089718087?text=Hello%20George%20Foods%20Parappur%2C%20I%20would%20like%20to%20place%20an%20order."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="whatsapp-inline-badge"
+                    title="WhatsApp Parappur"
+                  >
+                    <WhatsAppIcon size={13} /> Chat
+                  </a>
+
+                  <span style={{ color: "rgba(255, 255, 255, 0.8)" }}>Peramangalam:</span>
+                  <a href="tel:9995233121" style={{ color: "white", fontWeight: "600" }}>9995233121</a>
+                  <a
+                    href="https://wa.me/919995233121?text=Hello%20George%20Foods%20Peramangalam%2C%20I%20would%20like%20to%20place%20an%20order."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="whatsapp-inline-badge"
+                    title="WhatsApp Peramangalam"
+                  >
+                    <WhatsAppIcon size={13} /> Chat
+                  </a>
                 </div>
               </div>
             </div>
