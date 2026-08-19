@@ -68,7 +68,7 @@ const categoryMeta = {
   specialDishes: {
     title: "Special Dishes & Live Counters",
     subtitle: "Sugar Candy, Chocolate Fountain, Live Chaat, Seafood & Nadan Ruchi",
-    description: "Immersive live food counters featuring spun Sugar Candy, cascading Chocolate Fountain (Foundane), live Chaat (Bhel Puri, Pani Puri, Masala Puri), live Seafood (Fish Thoran, Fish Tawa Fry), and authentic Nadan Ruchi (Kappa Puzhukku, Chakka, Liver Roast).",
+    description: "Immersive live food counters featuring spun Sugar Candy, cascading Chocolate Fountain (Foundane), live Chaat (Bhel Puri, Pani Puri, Masala Puri), live Seafood (Fish Thoran, Fish Tawa Fry), and authentic Nadan Ruchi (Kappa Puzhukku, Chakka, Idichakka Thoran, Nadan Chicken Curry & Liver Roast).",
     image: "/menu/special_counters.png",
     imageAlt: "Special Dishes Live Counters featuring Chocolate Fountain, Sugar Candy, Chaat Counter, Seafood Tawa and Kappa",
     badge: "Interactive Experience"
@@ -313,11 +313,13 @@ const masterCatalog = [
     ]
   },
   {
-    category: "🏺 Nadan Ruchi Counter (Kappa Puzhukku, Chakka & Liver)",
+    category: "🏺 Nadan Ruchi Counter (Kappa, Chakka, Idichakka, Chicken Curry & Liver)",
     isVeg: false,
     dishes: [
       { name: "Kappa Puzhukku (Steamed Tapioca)", desc: "Authentic Kerala mashed tapioca tempered with mustard, red chilies, garlic & coconut paste" },
       { name: "Chakka Delicacy (Chakka Puzhukku / Aviyal)", desc: "Traditional steamed jackfruit mash cooked with coarsely ground coconut & spices" },
+      { name: "Idichakka Thoran", desc: "Tender raw jackfruit crushed & stir-fried with grated coconut, mustard seeds & curry leaves" },
+      { name: "Nadan Chicken Curry", desc: "Traditional Kerala home-style chicken curry cooked in rich roasted coconut gravy & aromatic spices" },
       { name: "Nadan Liver Roast / Fry", desc: "Tender liver slow-cooked & tossed with black pepper, curry leaves, ginger & fried coconut" },
       { name: "Nadan Kozhi Varattiyathu", desc: "Country-style Kerala spicy fried chicken" }
     ]
@@ -605,7 +607,7 @@ const specialCountersPackages = [
     isVeg: false,
     badge: "Authentic Kerala Village Counter",
     items: [
-      { course: "Traditional Staples", list: ["Steamed Kappa Puzhukku (Tapioca Mash with Coconut & Chili)", "Chakka Delicacy (Chakka Puzhukku / Steamed Jackfruit Mash with Spices)", "Nadan Liver Roast / Fry (Mutton / Chicken Liver tossed with Black Pepper, Curry Leaves & Shallots)"] },
+      { course: "Traditional Staples", list: ["Steamed Kappa Puzhukku (Tapioca Mash with Coconut & Chili)", "Chakka Delicacy (Chakka Puzhukku / Steamed Jackfruit Mash with Spices)", "Idichakka Thoran (Crushed Tender Jackfruit Stir-Fry with Grated Coconut)", "Nadan Chicken Curry (Authentic Kerala Home-Style Roasted Coconut Gravy Chicken)", "Nadan Liver Roast / Fry (Mutton / Chicken Liver tossed with Black Pepper, Curry Leaves & Shallots)"] },
       { course: "Heritage Accompaniments", list: ["Fiery Kanthari Mulaku Chammanthi", "Thick Red Claypot Fish Curry Gravy", "Fried Coconut Slivers & Garlic Chips"] }
     ]
   }

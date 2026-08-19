@@ -153,7 +153,7 @@ a {
 
 .section-header {
   max-width: 700px;
-  margin: 0 auto 5rem auto;
+  margin: 0 auto 3.25rem auto;
 }
 
 .section-tag {
@@ -669,7 +669,7 @@ a {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   flex-wrap: wrap;
 }
 
@@ -702,7 +702,7 @@ a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
-  min-height: 400px;
+  min-height: auto;
 }
 
 .menu-list {
@@ -1761,5 +1761,116 @@ textarea.form-input {
 .whatsapp-btn-primary svg {
   color: #ffffff !important;
 }
+
+/* YouTube Shorts Section Styles */
+.shorts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 1024px) {
+  .shorts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .shorts-grid {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.short-card {
+  background: var(--color-purple-dark);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(36, 14, 76, 0.2);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.short-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(36, 14, 76, 0.35), 0 0 25px rgba(255, 215, 0, 0.25);
+  border-color: var(--color-gold);
+}
+
+.short-video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 177.78%; /* 9:16 vertical aspect ratio */
+  height: 0;
+  background: #0f0521;
+}
+
+.short-video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.short-card-body {
+  padding: 1.25rem 1rem;
+  background: var(--color-purple-dark);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-grow: 1;
+}
+
+.short-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  align-self: flex-start;
+  font-size: 0.725rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #240e4c;
+  background: var(--color-gold);
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+}
+
+.short-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.35;
+  font-family: var(--font-serif);
+}
+
+.short-youtube-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-gold);
+  text-decoration: none;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.short-youtube-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 
 

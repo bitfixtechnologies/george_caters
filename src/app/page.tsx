@@ -128,15 +128,51 @@ const menuData = {
       badge: "Fresh Catch"
     },
     {
-      title: "Nadan Ruchi Counter (Kappa Puzhukku, Chakka & Liver)",
+      title: "Nadan Ruchi Counter (Kappa Puzhukku, Chakka, Idichakka & Chicken)",
       tag: "Kerala Heritage",
-      description: "Traditional steamed Kappa Puzhukku, Chakka delicacy, and spicy Nadan Liver Roast with black pepper & curry leaves.",
+      description: "Traditional steamed Kappa Puzhukku, Chakka delicacy, Idichakka Thoran, Nadan Chicken Curry, and spicy Nadan Liver Roast with black pepper & curry leaves.",
       badge: "Signature"
     }
   ]
 };
 
 type MenuCategory = keyof typeof menuData;
+
+// YouTube Shorts Data
+const youtubeShorts = [
+  {
+    id: "-oYoTb5qicw",
+    title: "Live Event Catering Action",
+    badge: "Live Service",
+    description: "Vibrant live catering service, buffet spreads, and grand dining experiences.",
+    embedUrl: "https://www.youtube-nocookie.com/embed/-oYoTb5qicw",
+    watchUrl: "https://youtube.com/shorts/-oYoTb5qicw?si=HZMfXHt9QbMhsiUC"
+  },
+  {
+    id: "BvY8IPI6kOs",
+    title: "Authentic Live Counter Delights",
+    badge: "Special Counters",
+    description: "Interactive live cooking stations featuring fresh coastal seafood & appetizers.",
+    embedUrl: "https://www.youtube-nocookie.com/embed/BvY8IPI6kOs",
+    watchUrl: "https://youtube.com/shorts/BvY8IPI6kOs?si=WRICF8sVpWG90P60"
+  },
+  {
+    id: "xso5dr8FgRg",
+    title: "Kerala Heritage Village Kitchen",
+    badge: "Traditional Nadan",
+    description: "Authentic village-style preparation of Kappa Puzhukku & Kerala staples.",
+    embedUrl: "https://www.youtube-nocookie.com/embed/xso5dr8FgRg",
+    watchUrl: "https://youtube.com/shorts/xso5dr8FgRg?si=7l7rj-NmaXYWgMdk"
+  },
+  {
+    id: "P-ZkL7E6EG8",
+    title: "Grand Banquet Presentation",
+    badge: "Chef Special",
+    description: "Mouthwatering feast spreads, slow-cooked curries & signature party platters.",
+    embedUrl: "https://www.youtube-nocookie.com/embed/P-ZkL7E6EG8",
+    watchUrl: "https://youtube.com/shorts/P-ZkL7E6EG8?si=pcOvWC091KAlzhyI"
+  }
+];
 
 
 
@@ -429,7 +465,7 @@ export default function Home() {
       </section>
 
       {/* Menu Showcase Section */}
-      <section id="menu" className="section">
+      <section id="menu" className="section" style={{ paddingTop: "5rem", paddingBottom: "3.5rem" }}>
         <div className="container">
           <div className="section-header text-center">
             <span className="section-tag">Taste of Luxury</span>
@@ -502,6 +538,60 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* YouTube Shorts Event Highlights Section */}
+      <section id="event-shorts" className="section" style={{ backgroundColor: "var(--color-white)", paddingTop: "3.5rem", paddingBottom: "5rem" }}>
+        <div className="container">
+          <div className="section-header text-center">
+            <span className="section-tag">🎬 Live Action & Stories</span>
+            <h2>Watch Our Catering in Action</h2>
+            <p>
+              Experience the energy of our live food counters, village feast preparations, and banquet celebrations captured in YouTube Shorts.
+            </p>
+          </div>
+
+          <div className="shorts-grid">
+            {youtubeShorts.map((short) => (
+              <div className="short-card" key={short.id}>
+                <div className="short-video-container">
+                  <iframe
+                    src={short.embedUrl}
+                    title={short.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    loading="lazy"
+                  ></iframe>
+                </div>
+                <div className="short-card-body">
+                  <span className="short-card-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                    {short.badge}
+                  </span>
+                  <h3 className="short-card-title">{short.title}</h3>
+                  <p style={{ fontSize: "0.85rem", color: "rgba(255, 255, 255, 0.8)", margin: "0.2rem 0 0.4rem 0", lineHeight: "1.4" }}>
+                    {short.description}
+                  </p>
+                  <a
+                    href={short.watchUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="short-youtube-link"
+                  >
+                    <span>Watch on YouTube</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
