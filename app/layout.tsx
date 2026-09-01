@@ -18,6 +18,10 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "George Foods & Caters | Premium Catering Services & Takeaway Hubs",
   description: "Experience premium catering services and gourmet takeaway hubs with George Foods & Caters. Tailored menus, custom platters, and impeccable food for weddings, gatherings, and daily pickup.",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
