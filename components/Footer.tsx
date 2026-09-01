@@ -19,12 +19,12 @@ export default function Footer() {
             </p>
             <div className="social-links">
               <a
-                href="https://youtube.com/shorts/-oYoTb5qicw?si=HZMfXHt9QbMhsiUC"
+                href="https://www.facebook.com/share/14nbhSaFBQm/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
                 aria-label="Facebook"
-                title="Facebook / YouTube Videos"
+                title="Follow us on Facebook"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
@@ -107,7 +107,7 @@ export default function Footer() {
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                   <polyline points="22,6 12,13 2,6"></polyline>
                 </svg>
-                <span>Georgefoods85@gmail.com</span>
+                <a href="mailto:Georgefoods85@gmail.com" style={{ color: "white", textDecoration: "none" }}>Georgefoods85@gmail.com</a>
               </div>
               <div style={{ marginTop: "1rem", borderTop: "1px solid rgba(255, 255, 255, 0.1)", paddingTop: "1rem" }}>
                 <span style={{ fontSize: "0.85rem", fontWeight: "600", color: "var(--color-accent)", display: "block", marginBottom: "0.5rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>Takeaway Huts</span>
