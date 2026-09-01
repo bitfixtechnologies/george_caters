@@ -110,7 +110,7 @@ export default function ContactPage() {
                   </div>
                   <div className="contact-text">
                     <span className="contact-label">Email Us</span>
-                    <span className="contact-value">Georgefood85@gmail.com</span>
+                    <span className="contact-value">Georgefoods85@gmail.com</span>
                   </div>
                 </div>
 
