@@ -681,14 +681,14 @@ export default function Home() {
               <div>
                 <div className="testimonial-stars">★★★★★</div>
                 <p className="testimonial-quote">
-                  "Royal Violet exceeded every expectation! The Truffle Mushroom Bruschetta was the talk of our wedding reception. The service was fluid, professional, and incredibly kind. We couldn't be happier."
+                  "George Foods & Caters delivered an extraordinary feast for our wedding reception! The Korean Pork and Fish Vattichathu were the absolute talk of the evening among our guests. Hot delivery, authentic flavor, and fluid service!"
                 </p>
               </div>
               <div className="testimonial-author">
-                <div className="author-avatar">EG</div>
+                <div className="author-avatar">MT</div>
                 <div>
-                  <span className="author-name">Emily & Greg S.</span>
-                  <p className="author-role">Wedding Catering Customers</p>
+                  <span className="author-name">Mathew & Anitha Thomas</span>
+                  <p className="author-role">Thrissur | Wedding Catering Customers</p>
                 </div>
               </div>
             </div>
@@ -698,14 +698,14 @@ export default function Home() {
               <div>
                 <div className="testimonial-stars">★★★★★</div>
                 <p className="testimonial-quote">
-                  "For our annual corporate gala, we wanted something premium and seamless. The team set up a marvelous buffet that matched our brand colors, and the Sea Bass was cooked to absolute perfection."
+                  "We ordered catering for our annual corporate gala, and the experience was seamless. The Pork Varattiyathu, Kerala Parotta, and Chicken 65 were rich, authentic, and packed with flavor. Every guest complimented the dining spread!"
                 </p>
               </div>
               <div className="testimonial-author">
-                <div className="author-avatar">MC</div>
+                <div className="author-avatar">JV</div>
                 <div>
-                  <span className="author-name">Marcus Chen</span>
-                  <p className="author-role">VP, Vertex Global | Corporate Catering</p>
+                  <span className="author-name">Dr. Joseph Varghese</span>
+                  <p className="author-role">Ernakulam | Corporate Event Host</p>
                 </div>
               </div>
             </div>
@@ -715,14 +715,14 @@ export default function Home() {
               <div>
                 <div className="testimonial-stars">★★★★★</div>
                 <p className="testimonial-quote">
-                  "An intimate 50th birthday dinner that felt like a 3-Michelin star restaurant inside my own garden. Chef Antonis explained every dish, and the Elderflower Pear Cocktails were beautifully crafted."
+                  "For our family milestone gathering, the Palappam with Mutton Stew and Gourmet Party Platters were prepared to perfection. Outstanding traditional Kerala taste, stunning presentation, and top-tier coordination!"
                 </p>
               </div>
               <div className="testimonial-author">
-                <div className="author-avatar">HL</div>
+                <div className="author-avatar">SK</div>
                 <div>
-                  <span className="author-name">Helena Laurent</span>
-                  <p className="author-role">Birthday Party Platter Customer</p>
+                  <span className="author-name">Susan & Ramesh Kurup</span>
+                  <p className="author-role">Kottayam | Family Gathering Customer</p>
                 </div>
               </div>
             </div>
