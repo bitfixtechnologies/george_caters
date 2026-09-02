@@ -681,14 +681,14 @@ export default function Home() {
               <div>
                 <div className="testimonial-stars">★★★★★</div>
                 <p className="testimonial-quote">
-                  "Royal Violet exceeded every expectation! The Truffle Mushroom Bruschetta was the talk of our wedding reception. The service was fluid, professional, and incredibly kind. We couldn't be happier."
+                  "George Foods & Caters delivered an extraordinary feast for our wedding reception! The Korean Pork and Fish Vattichathu were the absolute talk of the evening among our guests. Hot delivery, authentic flavor, and fluid service!"
                 </p>
               </div>
               <div className="testimonial-author">
-                <div className="author-avatar">EG</div>
+                <div className="author-avatar">MT</div>
                 <div>
-                  <span className="author-name">Emily & Greg S.</span>
-                  <p className="author-role">Wedding Catering Customers</p>
+                  <span className="author-name">Mathew & Anitha Thomas</span>
+                  <p className="author-role">Thrissur | Wedding Catering Customers</p>
                 </div>
               </div>
             </div>
@@ -698,14 +698,14 @@ export default function Home() {
               <div>
                 <div className="testimonial-stars">★★★★★</div>
                 <p className="testimonial-quote">
-                  "For our annual corporate gala, we wanted something premium and seamless. The team set up a marvelous buffet that matched our brand colors, and the Sea Bass was cooked to absolute perfection."
+                  "We ordered catering for our annual corporate gala, and the experience was seamless. The Pork Varattiyathu, Kerala Parotta, and Chicken 65 were rich, authentic, and packed with flavor. Every guest complimented the dining spread!"
                 </p>
               </div>
               <div className="testimonial-author">
-                <div className="author-avatar">MC</div>
+                <div className="author-avatar">JV</div>
                 <div>
-                  <span className="author-name">Marcus Chen</span>
-                  <p className="author-role">VP, Vertex Global | Corporate Catering</p>
+                  <span className="author-name">Dr. Joseph Varghese</span>
+                  <p className="author-role">Ernakulam | Corporate Event Host</p>
                 </div>
               </div>
             </div>
@@ -715,14 +715,14 @@ export default function Home() {
               <div>
                 <div className="testimonial-stars">★★★★★</div>
                 <p className="testimonial-quote">
-                  "An intimate 50th birthday dinner that felt like a 3-Michelin star restaurant inside my own garden. Chef Antonis explained every dish, and the Elderflower Pear Cocktails were beautifully crafted."
+                  "For our family milestone gathering, the Palappam with Mutton Stew and Gourmet Party Platters were prepared to perfection. Outstanding traditional Kerala taste, stunning presentation, and top-tier coordination!"
                 </p>
               </div>
               <div className="testimonial-author">
-                <div className="author-avatar">HL</div>
+                <div className="author-avatar">SK</div>
                 <div>
-                  <span className="author-name">Helena Laurent</span>
-                  <p className="author-role">Birthday Party Platter Customer</p>
+                  <span className="author-name">Susan & Ramesh Kurup</span>
+                  <p className="author-role">Kottayam | Family Gathering Customer</p>
                 </div>
               </div>
             </div>
@@ -795,8 +795,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <div className="contact-text">
-                    <span className="contact-label">Email Us</span>
-                    <span className="contact-value">Georgefood85@gmail.com</span>
+                    <a href="mailto:Georgefoods85@gmail.com" className="contact-value" style={{ textDecoration: "none" }}>Georgefoods85@gmail.com</a>
                   </div>
                 </div>
 
@@ -809,42 +808,48 @@ export default function Home() {
                   </div>
                   <div className="contact-text" style={{ width: "100%" }}>
                     <span className="contact-label">Takeaway Huts</span>
-                    <div style={{ display: "grid", gridTemplateColumns: "minmax(105px, auto) 1fr auto", rowGap: "0.45rem", columnGap: "0.5rem", marginTop: "0.35rem", color: "var(--color-text-muted)", fontSize: "0.9rem", alignItems: "center" }}>
-                      <span>Adat Center:</span>
-                      <a href="tel:7736221331" style={{ color: "var(--color-text-light)", fontWeight: "600" }}>7736221331</a>
-                      <a
-                        href="https://wa.me/917736221331?text=Hello%20George%20Foods%20Adat%20Center%2C%20I%20would%20like%20to%20place%20an%20order."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="whatsapp-inline-badge"
-                        title="WhatsApp Adat Center"
-                      >
-                        <WhatsAppIcon size={13} /> Chat
-                      </a>
+                    <div className="takeaway-huts-grid">
+                      <div className="takeaway-hut-row">
+                        <span className="takeaway-hut-name">Adat Center:</span>
+                        <a href="tel:7736221331" className="takeaway-hut-phone">7736221331</a>
+                        <a
+                          href="https://wa.me/917736221331?text=Hello%20George%20Foods%20Adat%20Center%2C%20I%20would%20like%20to%20place%20an%20order."
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="whatsapp-inline-badge"
+                          title="WhatsApp Adat Center"
+                        >
+                          <WhatsAppIcon size={13} /> Chat
+                        </a>
+                      </div>
 
-                      <span>Parappur:</span>
-                      <a href="tel:8089718087" style={{ color: "var(--color-text-light)", fontWeight: "600" }}>8089718087</a>
-                      <a
-                        href="https://wa.me/918089718087?text=Hello%20George%20Foods%20Parappur%2C%20I%20would%20like%20to%20place%20an%20order."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="whatsapp-inline-badge"
-                        title="WhatsApp Parappur"
-                      >
-                        <WhatsAppIcon size={13} /> Chat
-                      </a>
+                      <div className="takeaway-hut-row">
+                        <span className="takeaway-hut-name">Parappur:</span>
+                        <a href="tel:8089718087" className="takeaway-hut-phone">8089718087</a>
+                        <a
+                          href="https://wa.me/918089718087?text=Hello%20George%20Foods%20Parappur%2C%20I%20would%20like%20to%20place%20an%20order."
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="whatsapp-inline-badge"
+                          title="WhatsApp Parappur"
+                        >
+                          <WhatsAppIcon size={13} /> Chat
+                        </a>
+                      </div>
 
-                      <span>Peramangalam:</span>
-                      <a href="tel:9995233121" style={{ color: "var(--color-text-light)", fontWeight: "600" }}>9995233121</a>
-                      <a
-                        href="https://wa.me/919995233121?text=Hello%20George%20Foods%20Peramangalam%2C%20I%20would%20like%20to%20place%20an%20order."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="whatsapp-inline-badge"
-                        title="WhatsApp Peramangalam"
-                      >
-                        <WhatsAppIcon size={13} /> Chat
-                      </a>
+                      <div className="takeaway-hut-row">
+                        <span className="takeaway-hut-name">Peramangalam:</span>
+                        <a href="tel:9995233121" className="takeaway-hut-phone">9995233121</a>
+                        <a
+                          href="https://wa.me/919995233121?text=Hello%20George%20Foods%20Peramangalam%2C%20I%20would%20like%20to%20place%20an%20order."
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="whatsapp-inline-badge"
+                          title="WhatsApp Peramangalam"
+                        >
+                          <WhatsAppIcon size={13} /> Chat
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
