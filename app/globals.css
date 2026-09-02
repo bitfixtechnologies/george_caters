@@ -1463,7 +1463,13 @@ textarea.form-input {
   }
 
   .footer-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.25rem 1.25rem;
+  }
+
+  .footer-logo-desc,
+  .footer-grid > div:nth-child(4) {
+    grid-column: 1 / -1;
   }
 
   .footer-bottom {
@@ -1589,6 +1595,19 @@ textarea.form-input {
   .inquiry-wrapper .form-input {
     font-size: 16px;
     padding: 0.8rem 0.95rem;
+  }
+
+  .footer-title {
+    font-size: 1.05rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .footer-links {
+    gap: 0.65rem;
+  }
+
+  .footer-link {
+    font-size: 0.875rem;
   }
 }
 
