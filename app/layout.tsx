@@ -14,16 +14,18 @@ const jakarta = Plus_Jakarta_Sans({
   variable: "--font-sans",
   display: "swap",
 });
-
 export const metadata: Metadata = {
   title: "George Foods & Caters | Premium Catering Services & Takeaway Hubs",
-  description: "Experience premium catering services and gourmet takeaway hubs with George Foods & Caters. Tailored menus, custom platters, and impeccable food for weddings, gatherings, and daily pickup.",
+  description:
+    "Experience premium catering services and gourmet takeaway hubs with George Foods & Caters. Tailored menus, custom platters, and impeccable food for weddings, gatherings, and daily pickup.",
+  verification: {
+    google: "rPfALyLVoVHXtNpBEKbKPS_GDjHa_8foXdCPiP3Ikp0",
+  },
   icons: {
     icon: "/logo.png",
     apple: "/logo.png",
   },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
