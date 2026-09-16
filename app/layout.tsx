@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description:
     "Experience premium catering services and gourmet takeaway hubs with George Foods & Caters. Tailored menus, custom platters, and impeccable food for weddings, gatherings, and daily pickup.",
   verification: {
-    google: "rPfALyLVoVHXtNpBEKbKPS_GDjHa_8foXdCPiP3Ikp0",
+    google: "VU61PB7xi7HgbSxeuLBA-sJMG1HdMsajZVNMyQBNXjU",
   },
   icons: {
     icon: "/logo.png",
