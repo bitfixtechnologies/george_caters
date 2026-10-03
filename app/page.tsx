@@ -5,6 +5,8 @@ import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import WhatsAppIcon from "../components/WhatsAppIcon";
+import Link from "next/link";
+import { BLOG_POSTS } from "../data/blogData";
 
 // Menu Data
 const menuData = {
@@ -726,6 +728,77 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Culinary Blog / News Section */}
+      <section className="section" style={{ background: "linear-gradient(180deg, var(--color-bg-light) 0%, var(--color-bg-dark) 100%)" }}>
+        <div className="container">
+          <div className="section-header text-center" style={{ marginBottom: "3rem" }}>
+            <span className="section-tag">Culinary Insights</span>
+            <h2>Latest News & Event Guides</h2>
+            <p>Tips, recipes, and expert advice for planning memorable celebrations.</p>
+          </div>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gap: "2.5rem",
+              marginBottom: "3rem"
+            }}
+          >
+            {BLOG_POSTS.slice(0, 3).map((post) => (
+              <article
+                key={post.id}
+                className="blog-card"
+              >
+                <div className="blog-card-img-wrapper">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="blog-card-img"
+                  />
+                  <span className="blog-card-category">
+                    {post.category}
+                  </span>
+                </div>
+
+                <div className="blog-card-content">
+                  <div className="blog-card-meta">
+                    <span>{post.date}</span>
+                    <span>•</span>
+                    <span>{post.readTime}</span>
+                  </div>
+                  <h3 className="blog-card-title">
+                    <Link href={`/blog/${post.slug}`}>
+                      {post.title}
+                    </Link>
+                  </h3>
+                  <p className="blog-card-excerpt">
+                    {post.excerpt}
+                  </p>
+                  <div className="blog-card-footer">
+                    <span className="blog-card-author">
+                      By {post.author.name.split(" ")[1] || post.author.name}
+                    </span>
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="blog-card-link"
+                    >
+                      Read Article &rarr;
+                    </Link>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div style={{ textAlign: "center" }}>
+            <Link href="/blog" className="btn btn-primary" style={{ padding: "0.75rem 2rem", fontSize: "0.95rem" }}>
+              Explore All Articles & Guides &rarr;
+            </Link>
           </div>
         </div>
       </section>
