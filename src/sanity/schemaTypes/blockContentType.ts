@@ -1,0 +1,57 @@
+import { defineType, defineArrayMember } from "sanity";
+
+export const blockContentType = defineType({
+  title: "Block Content",
+  name: "blockContent",
+  type: "array",
+  of: [
+    defineArrayMember({
+      title: "Block",
+      type: "block",
+      styles: [
+        { title: "Normal", value: "normal" },
+        { title: "H2 (Heading 2)", value: "h2" },
+        { title: "H3 (Heading 3)", value: "h3" },
+        { title: "Quote", value: "blockquote" },
+      ],
+      lists: [{ title: "Bullet", value: "bullet" }, { title: "Numbered", value: "number" }],
+      marks: {
+        decorators: [
+          { title: "Strong", value: "strong" },
+          { title: "Emphasis", value: "em" },
+          { title: "Code", value: "code" },
+        ],
+        annotations: [
+          {
+            title: "URL Link",
+            name: "link",
+            type: "object",
+            fields: [
+              {
+                title: "URL",
+                name: "href",
+                type: "url",
+              },
+            ],
+          },
+        ],
+      },
+    }),
+    defineArrayMember({
+      type: "image",
+      options: { hotspot: true },
+      fields: [
+        {
+          name: "alt",
+          type: "string",
+          title: "Alternative Text",
+        },
+        {
+          name: "caption",
+          type: "string",
+          title: "Image Caption",
+        },
+      ],
+    }),
+  ],
+});

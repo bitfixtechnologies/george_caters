@@ -69,6 +69,14 @@ export default function Header() {
               </li>
               <li>
                 <Link 
+                  href="/blog" 
+                  className={`nav-link ${pathname?.startsWith("/blog") ? "active" : ""}`}
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link 
                   href="/contact" 
                   className={`nav-link ${pathname === "/contact" ? "active" : ""}`}
                 >
@@ -113,6 +121,7 @@ export default function Header() {
         <Link href="/about" className="nav-link" onClick={() => setMobileMenuOpen(false)}>About</Link>
         <Link href="/#services" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Services</Link>
         <Link href="/menu" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Menu</Link>
+        <Link href="/blog" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
         <Link href="/contact" className="nav-link" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
         <Link href="/contact" className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>Book Now</Link>
       </div>

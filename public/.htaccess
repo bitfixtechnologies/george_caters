@@ -1,0 +1,22 @@
+# Set index page priority
+DirectoryIndex index.html index.php
+
+# Disable directory browsing
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Redirect non-www to www (www.georgefoods.in)
+  RewriteCond %{HTTP_HOST} ^georgefoods\.in$ [NC]
+  RewriteRule ^(.*)$ https://www.georgefoods.in/$1 [R=301,L]
+
+  # Serve real files or directories directly
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Custom 404 handler
+  ErrorDocument 404 /404.html
+</IfModule>

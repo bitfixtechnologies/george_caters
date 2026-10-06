@@ -1,14 +1,20 @@
 "use client";
 
 import React from "react";
+import { usePathname } from "next/navigation";
 import WhatsAppIcon from "./WhatsAppIcon";
 
 export default function FloatingWhatsApp() {
+  const pathname = usePathname();
   const phoneNumber = "919495227110";
   const defaultMessage = encodeURIComponent(
     "Hello George Foods & Caters, I would like to inquire about your catering services."
   );
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${defaultMessage}`;
+
+  if (pathname?.startsWith("/studio")) {
+    return null;
+  }
 
   return (
     <div className="whatsapp-float-container">
